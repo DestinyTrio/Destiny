@@ -1,0 +1,54 @@
+<!-- ======= Footer ======= -->
+<footer id="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="d-flex justify-content-around flex-wrap">
+        <div class="col-lg-3 col-md-6 footer-info align-self-center">
+          <h3>Destiny Trio</h3>
+          <p></p>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-contact">
+          <h4>Contact Us</h4>
+          <p>
+            Barama <br />
+            Assam,781346<br />
+            India <br />
+            <strong>Phone:</strong> +91 7002 95 0434<br />
+            <strong>Email:</strong> destinytrio6@gmail.com<br />
+          </p>
+
+          <div class="social-links">
+            {% for social in offs %}
+            <a href="{{social.fb}}" class="facebook"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a href="{{social.insta}}" class="instagram"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            <a href="{{social.whatsapp}}" class="whatsapp"
+              ><i class="bi bi-whatsapp"></i
+            ></a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright <strong>Destiny Trio</strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!--
+        All the links in the footer should remain intact.
+        You can delete the links only if you purchased the pro version.
+        Licensing information: https://bootstrapmade.com/license/
+        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=BizPage
+      -->
+      Designed by <a href="{{social.fb}}">Destiny Trio</a>
+    </div>
+  </div>
+</footer>
+<!-- End Footer -->

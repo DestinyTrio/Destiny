@@ -1,0 +1,631 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<!-- ======= hero Section ======= -->
+<section id="hero">
+  <div class="hero-container">
+    <div
+      id="heroCarousel"
+      class="carousel slide carousel-fade"
+      data-bs-ride="carousel"
+      data-bs-interval="5000"
+    >
+      <ol id="hero-carousel-indicators" class="carousel-indicators"></ol>
+
+      <div class="carousel-inner" role="listbox">
+        {% for c in carousel %}
+        <div
+          class="carousel-item active"
+          style="background-image: url({{c.photo.url}})"
+        >
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">{{c.name}}</h2>
+              <p class="animate__animated animate__fadeInUp">
+                {{c.description | safe}}.
+              </p>
+              <a
+                href="#contact"
+                class="
+                  btn-get-started
+                  scrollto
+                  animate__animated animate__fadeInUp
+                "
+                >Lets talk</a
+              >
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <a
+        class="carousel-control-prev"
+        href="#heroCarousel"
+        role="button"
+        data-bs-slide="prev"
+      >
+        <span
+          class="carousel-control-prev-icon bi bi-chevron-left"
+          aria-hidden="true"
+        ></span>
+      </a>
+
+      <a
+        class="carousel-control-next"
+        href="#heroCarousel"
+        role="button"
+        data-bs-slide="next"
+      >
+        <span
+          class="carousel-control-next-icon bi bi-chevron-right"
+          aria-hidden="true"
+        ></span>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- End Hero Section -->
+<!-- ======= About Us Section ======= -->
+<section id="about">
+  <div class="container" data-aos="fade-up">
+    <header class="section-header">
+      <h3>About Us</h3>
+      <p>
+        We are a digital transformation consultancy and engineering company that
+        delivers cutting edge solutions for global organisations and technology
+        startups.We helping companies and established brands reimagine their
+        business through digitalisation.
+      </p>
+    </header>
+
+    <div class="row about-cols">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="about-col">
+          <div class="img">
+            <img src="assets/img/about-mission.jpg" alt="" class="img-fluid" />
+            <div class="icon"><i class="bi bi-bar-chart"></i></div>
+          </div>
+          <h2 class="title"><a href="#">Our Mission</a></h2>
+          <p>
+            Our mission is to help enterprises accelerate adoption of new
+            technologies, untangle complex issues that always emerge during
+            digital evolution, and orchestrate ongoing innovation.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="about-col">
+          <div class="img">
+            <img src="assets/img/about-plan.jpg" alt="" class="img-fluid" />
+            <div class="icon"><i class="bi bi-brightness-high"></i></div>
+          </div>
+          <h2 class="title"><a href="#">Our Plan</a></h2>
+          <p>
+            We always believes in best solutions for our Buisness Clients. We
+            are Offshore based web & app development company and domestic
+            experienced and exceptionally having great technical, Management,
+            Business Support Staff.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="about-col">
+          <div class="img">
+            <img src="assets/img/about-vision.jpg" alt="" class="img-fluid" />
+            <div class="icon"><i class="bi bi-calendar4-week"></i></div>
+          </div>
+          <h2 class="title"><a href="#">Our Vision</a></h2>
+          <p>
+            Our Vision is contribute to creating happy and fulfilling ives which
+            are also sustainable - surely a vision worth aspiring to? With
+            businesses spanning many sectors and touching many aspects of our
+            customers' lifestyles.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End About Us Section -->
+
+<!-- ======= Services Section ======= -->
+<section id="services">
+  <div class="container" data-aos="fade-up">
+    <header class="section-header wow fadeInUp">
+      <h3>Services</h3>
+      <p>
+        From IT strategy consulting and comprehensive technology roadmaps to the
+        end-to-end development of scalable solutions, Intellectsoft delivers a
+        full-cycle software development services that adapt seamlessly to your
+        project requirements and business needs.
+      </p>
+    </header>
+
+    <div class="row">
+      <div
+        class="col-lg-4 col-md-6 box"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <div class="icon"><i class="bi bi-briefcase"></i></div>
+        <h4 class="title" style="color: black">App Development</h4>
+        <p class="description">
+          We offer a full cycle of application design, integration and
+          management services. Whether it is a consumer oriented app or a
+          transformative enterprise-class solution, the company leads the entire
+          mobile app development process from ideation and concept to delivery,
+          and to ongoing ongoing support.
+        </p>
+      </div>
+      <div
+        class="col-lg-4 col-md-6 box"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <div class="icon"><i class="bi bi-card-checklist"></i></div>
+        <h4 class="title" style="color: black">Web Development</h4>
+        <p class="description">
+          These days Websites are required to have interactive organs, whether
+          in the shape of a simple submission form that saves users’ information
+          to a database or an elaborate social networking site such as Facebook.
+        </p>
+      </div>
+      <div
+        class="col-lg-4 col-md-6 box"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        <div class="icon"><i class="bi bi-bar-chart"></i></div>
+        <h4 class="title" style="color: black">UX/UI Design</h4>
+        <p class="description">
+          Want to build your product with a team that establishes a clear design
+          process, meets deadlines, and delivers a spot-on end result? Turn to
+          Destiny Trio’s UI and UX services. Our design team is a small design
+          studio within a large software company that will help you build an
+          engaging product easily and quickly.
+        </p>
+      </div>
+
+      <div
+        class="col-lg-4 col-md-6 box"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <div class="icon"><i class="bi bi-binoculars"></i></div>
+        <h4 class="title" style="color: black">Graphic Design</h4>
+        <p class="description">
+          Destiny Trio is a leading UI-UX Design company We understand the power
+          of user experience engineering and bring our 2+ years of application
+          design experience in to play to provide you specially crafted UI-UX
+          design services that can help your app and idea stand out.
+        </p>
+      </div>
+
+      <div
+        class="col-lg-4 col-md-6 box"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        <div class="icon"><i class="bi bi-brightness-high"></i></div>
+        <h4 class="title" style="color: black">Photography/Videography</h4>
+        <p class="description">
+          Destiny trio also offer to capture your moment in frame. Capture
+          anniversary, honeymoon, family, engagement, pre-wedding, event, etc.
+        </p>
+      </div>
+      <div
+        class="col-lg-4 col-md-6 box"
+        data-aos="fade-up"
+        data-aos-delay="400"
+      >
+        <div class="icon"><i class="bi bi-calendar4-week"></i></div>
+        <h4 class="title" style="color: black">QA & Testing</h4>
+        <p class="description">
+          Our QA services will help you establish concrete control over your
+          product’s life cycle, monitor every development stage, and give you
+          accurate product quality information. For over a decade, our QA
+          experts have been using the latest practices and technologies to
+          ensure efficient performance and high-quality project implementation
+          for the world’s largest enterprises, aiding in delivering solid
+          software on time.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Services Section -->
+
+<!-- ======= Call To Action Section ======= -->
+<section id="call-to-action">
+  <div class="container text-center" data-aos="zoom-in">
+    <p>
+      Established in 2019, Destiny Trio has steadily been growing and earning
+      the trust of hundreds of businesses by providing them with
+      enterprise-grade software solutions and turning their ideas into reality
+      with the help of our highly qualified developers.
+    </p>
+    <a class="cta-btn" href="#contact">GET IN TOUCH</a>
+  </div>
+</section>
+<!-- End Call To Action Section -->
+
+<!-- ======= Skills Section ======= -->
+<section id="skills">
+  <div class="container" data-aos="fade-up">
+    <header class="section-header">
+      <h3>Our Skills</h3>
+      <p></p>
+    </header>
+
+    <div class="skills-content">
+      <div class="progress">
+        <div
+          class="progress-bar bg-success"
+          role="progressbar"
+          aria-valuenow="100"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          <span class="skill">HTML <i class="val">100%</i></span>
+        </div>
+      </div>
+
+      <div class="progress">
+        <div
+          class="progress-bar bg-info"
+          role="progressbar"
+          aria-valuenow="90"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          <span class="skill">CSS <i class="val">90%</i></span>
+        </div>
+      </div>
+
+      <div class="progress">
+        <div
+          class="progress-bar bg-safe"
+          role="progressbar"
+          aria-valuenow="75"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          <span class="skill">JavaScript <i class="val">75%</i></span>
+        </div>
+      </div>
+
+      <div class="progress">
+        <div
+          class="progress-bar bg-safe"
+          role="progressbar"
+          aria-valuenow="70"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          <span class="skill">PHP<i class="val">70%</i></span>
+        </div>
+      </div>
+
+      <div class="progress">
+        <div
+          class="progress-bar bg-warning"
+          role="progressbar"
+          aria-valuenow="65"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          <span class="skill">Java <i class="val">65%</i></span>
+        </div>
+      </div>
+
+      <div class="progress">
+        <div
+          class="progress-bar bg-info"
+          role="progressbar"
+          aria-valuenow="80"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          <span class="skill">Python <i class="val">80%</i></span>
+        </div>
+      </div>
+
+      <div class="progress">
+        <div
+          class="progress-bar bg-warning"
+          role="progressbar"
+          aria-valuenow="62"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          <span class="skill">C# <i class="val">62%</i></span>
+        </div>
+      </div>
+
+      <div class="progress">
+        <div
+          class="progress-bar bg-danger"
+          role="progressbar"
+          aria-valuenow="55"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          <span class="skill">C++ <i class="val">55%</i></span>
+        </div>
+      </div>
+
+      <div class="progress">
+        <div
+          class="progress-bar bg-safe"
+          role="progressbar"
+          aria-valuenow="72"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          <span class="skill">React <i class="val">72%</i></span>
+        </div>
+      </div>
+
+      <div class="progress">
+        <div
+          class="progress-bar bg-danger"
+          role="progressbar"
+          aria-valuenow="58"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          <span class="skill">Laravel <i class="val">58%</i></span>
+        </div>
+      </div>
+
+      <div class="progress">
+        <div
+          class="progress-bar bg-safe"
+          role="progressbar"
+          aria-valuenow="75"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          <span class="skill">AWS<i class="val">75%</i></span>
+        </div>
+      </div>
+
+      <div class="progress">
+        <div
+          class="progress-bar bg-info"
+          role="progressbar"
+          aria-valuenow="80"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          <span class="skill">Graphics Designer <i class="val">80%</i></span>
+        </div>
+      </div>
+
+      <div class="progress">
+        <div
+          class="progress-bar bg-safe"
+          role="progressbar"
+          aria-valuenow="75"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          <span class="skill">Photoshop <i class="val">75%</i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Skills Section -->
+
+<!-- ======= Portfolio Section ======= -->
+<section id="career" class="section-bg">
+  <div class="car">
+    <div class="wrapper">
+      <div class="outer">
+        {% for career in careers %}
+        <div class="cardd" style="--delay: -1">
+          <div class="content">
+            <div class="imgg"><img src="{{career.photo.url}}" alt="" /></div>
+            <div class="details">
+              <span class="name" style="color: black">{{career.name}}</span>
+              <p style="color: black">{{career.description | safe}}</p>
+            </div>
+          </div>
+          <a href="{{career.get_url}}">Read</a>
+        </div>
+
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Portfolio Section -->
+
+<!-- ======= Testimonials Section ======= -->
+<section id="testimonials" class="section-bg">
+  <div class="container" data-aos="fade-up">
+    <header class="section-header">
+      <h3>Testimonials</h3>
+      <p>Our Clients Feedback</p>
+    </header>
+
+    <div
+      class="testimonials-slider swiper-container"
+      data-aos="fade-up"
+      data-aos-delay="100"
+    >
+      <div class="swiper-wrapper">
+        {% for t in test %}
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="{{t.photo.url}}" class="testimonial-img" alt="" />
+            <h3>{{t.name}}</h3>
+            <h4>{{t.position}}</h4>
+            <p>
+              <img
+                src="{% static 'img/quote-sign-left.png' %}"
+                class="quote-sign-left"
+                alt=""
+              />
+              {{t.description | safe}}
+              <img
+                src="{% static 'img/quote-sign-right.png' %}"
+                class="quote-sign-right"
+                alt=""
+              />
+            </p>
+          </div>
+        </div>
+        {% endfor %}
+        <!-- End testimonial item -->
+        <!-- End testimonial item -->
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+<!-- End Testimonials Section -->
+
+
+<!-- ======= Team Section ======= -->
+<section id="team">
+  <div class="container" data-aos="fade-up">
+    <div class="section-header">
+      <h3>Team</h3>
+      <p>
+        Destiny Trio Executive Leadership and Senior Management bring decades of
+        industry experience, a global perspective and a passion for achieving
+        results.
+      </p>
+    </div>
+
+    <div class="d-flex justify-content-around flex-wrap">
+      {% for team in teams %}
+      <div class="col-md-3 col-sm-3">
+        <div class="member" data-aos="fade-up" data-aos-delay="100">
+          <img src="{{team.photo.url}}" class="img-fluid" alt="" />
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>{{team.name}}</h4>
+              <span>{{team.description}}</span>
+              <div class="social">
+                <a href="{{team.twitter}}"><i class="bi bi-twitter"></i></a>
+                <a href="{{team.facebook}}"><i class="bi bi-facebook"></i></a>
+                <a href="{{team.instagram}}"><i class="bi bi-instagram"></i></a>
+                <a href="{{team.linkedin}}"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- End Team Section -->
+
+<!-- ======= Contact Section ======= -->
+<section id="contact" class="section-bg">
+  <div class="container" data-aos="fade-up">
+    <div class="section-header">
+      <h3>Contact Us</h3>
+      <p>NEED FORWARD-THINKING SOFTWARE? GET IN TOUCH WITH US.</p>
+    </div>
+
+    <div class="row contact-info">
+      <div class="col-md-4">
+        <div class="contact-address">
+          <i class="bi bi-geo-alt"></i>
+          <h3>Address</h3>
+          <address>Barama,Assam,India,781346</address>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="contact-phone">
+          <i class="bi bi-phone"></i>
+          <h3>Phone Number</h3>
+          <p><a href="tel:+917002950434">+91 7002950434</a></p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="contact-email">
+          <i class="bi bi-envelope"></i>
+          <h3>Email</h3>
+          <p>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=destinytrio6@gmail.com"
+              >destinytrio6@gmail.com</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {% comment %}
+    <div>{{form}}</div>
+    {% endcomment %}
+
+  
+    <div class="form">
+      <form action="" method="POST" role="form" class="php-email-form">
+        {% csrf_token %}
+        <div class="row">
+          <div class="form-group col-md-6">
+            <input
+              type="text"
+              name="name"
+              class="form-control"
+              id="name"
+              placeholder="Your Name"
+              required
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <input
+              type="email"
+              class="form-control"
+              name="email"
+              id="email"
+              placeholder="Your Email"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            name="subject"
+            id="subject"
+            placeholder="Subject"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <textarea
+            class="form-control"
+            name="message"
+            rows="5"
+            placeholder="Message"
+            required
+          ></textarea>
+        </div>
+        <div class="my-3">
+          <div class="loading">Loading</div>
+          <div class="error-message"></div>
+          <div class="sent-message">Your message has been sent. Thank you!</div>
+        </div>
+        <div class="text-center">
+          <button type="submit">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- End Contact Section -->
+
+{% endblock content %}
